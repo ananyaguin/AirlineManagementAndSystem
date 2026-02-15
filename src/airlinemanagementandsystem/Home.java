@@ -34,8 +34,29 @@ public class Home extends JFrame implements ActionListener {
     JMenu details=new JMenu("Details");
     menubar.add(details);
     
-    JMenu Booking=new JMenu("Booking");
-    menubar.add(Booking);
+    JMenuItem flightDetails =new JMenu("Flight Details");
+    details.add(flightDetails);
+    
+    
+    JMenuItem customerDetails=new JMenu("Add Customer Details");
+    details.add(customerDetails);
+    
+    JMenuItem journeyDetails=new JMenu(" Journey Details");
+    details.add(journeyDetails);
+    
+    
+    
+    JMenu ticket=new JMenu("Ticket");
+    menubar.add(ticket);
+    
+    JMenuItem bookflight=new JMenu(" Book flight");
+    ticket.add(bookflight);
+    
+    JMenuItem ticketCancelation=new JMenu(" Cancel Ticket");
+    ticket.add(ticketCancelation);
+    
+    JMenuItem boardingpass=new JMenu(" Boarding Pass");
+    ticket.add(boardingpass);
     
     
     setExtendedState(JFrame.MAXIMIZED_BOTH);
