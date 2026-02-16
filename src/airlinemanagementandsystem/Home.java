@@ -37,12 +37,40 @@ public class Home extends JFrame implements ActionListener {
     JMenuItem flightDetails =new JMenu("Flight Details");
     details.add(flightDetails);
     
+    flightDetails.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent ae) {
+        new FlightDetails();
+    }
+});
+
+
     
     JMenuItem customerDetails=new JMenu("Add Customer Details");
     details.add(customerDetails);
     
+    customerDetails.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent ae) {
+        new CustomerDetails();
+    }
+});
+
+
+    
     JMenuItem journeyDetails=new JMenu(" Journey Details");
     details.add(journeyDetails);
+    
+    
+
+    
+    JMenuItem addCustomer = new JMenuItem("Add Customer");
+    details.add(addCustomer);
+
+    addCustomer.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent ae) {
+        new AddCustomer();
+    }
+     });
+
     
     
     
@@ -52,11 +80,24 @@ public class Home extends JFrame implements ActionListener {
     JMenuItem bookflight=new JMenu(" Book flight");
     ticket.add(bookflight);
     
+    bookflight.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent ae) {
+        new BookFlight();
+    }
+});
+
+    
     JMenuItem ticketCancelation=new JMenu(" Cancel Ticket");
     ticket.add(ticketCancelation);
     
-    JMenuItem boardingpass=new JMenu(" Boarding Pass");
+    JMenuItem boardingpass=new JMenu(" Boardingpass");
     ticket.add(boardingpass);
+    
+    
+    
+
+    
+
     
     
     setExtendedState(JFrame.MAXIMIZED_BOTH);
