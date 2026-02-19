@@ -130,9 +130,3 @@ Add admin and user roles
 Convert into Spring Boot Web Application
 
 Integrate real-time flight API
-
-👩‍💻 Developer
-
-Ananya Guin
-B.Tech Student | Aspiring Java Backend Developer
-
