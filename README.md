@@ -1,132 +1,249 @@
+
 ✈️ Airline Management System
+Java Swing + JDBC + MySQL Desktop Application
 
-A desktop-based Airline Management System developed using Java Swing (GUI) and MySQL Database with JDBC connectivity, built in Apache NetBeans IDE.
-
-This project demonstrates database integration, GUI development, and CRUD operations in Java.
+A desktop-based Airline Management System developed using Java Swing (GUI) and MySQL Database, integrated through JDBC connectivity.
+The system simulates real-world airline booking operations including authentication, customer management, flight handling, and ticket processing.
 
 📌 Project Overview
 
-The Airline Management System allows users to:
+This project demonstrates:
 
-Login securely
+GUI development using Java Swing
 
-Manage customer details
+Backend logic implementation using Java
 
-View available flights
+Database connectivity using JDBC
 
-Book flight tickets
+Execution of SQL queries (CRUD operations)
 
-Cancel bookings
+Modular multi-class project structure
 
-Store and retrieve data from MySQL database
-
-The system uses JDBC (Java Database Connectivity) to connect Java application with MySQL database.
 
 🛠️ Technologies Used
 
 ☕ Java
 
-🖥️ Java Swing (GUI)
+🖥 Java Swing
 
-🗄️ MySQL
+🗄 MySQL
 
 🔌 JDBC (Java Database Connectivity)
 
-🧠 OOP Concepts
-
-🛠️ Apache NetBeans IDE
+🛠 Apache NetBeans
 
 🔄 Git & GitHub
 
-🧩 Key Features
 
-🔐 Login Authentication
 
-👤 Add Customer Details
+📂 Project Structure & File Explanation
+🔐 Login Module
 
-📋 View Customer Information
+Purpose: User authentication
 
-✈️ Flight Information Management
+Internal Working:
 
-🎟️ Ticket Booking System
+Accepts username and password using Swing components.
 
-❌ Ticket Cancellation
+Validates credentials.
 
-🚪 Logout Functionality
+On successful validation:
 
-🗄️ Database Integration using JDBC
+Closes login window.
 
-🗄️ Database Configuration
-Step 1: Create Database
-CREATE DATABASE airline;
-USE airline;
-Step 2: Create Flight Table
-CREATE TABLE flight (
-    id VARCHAR(10),
-    flight_code VARCHAR(20),
-    source VARCHAR(50),
-    destination VARCHAR(50)
-);
-Step 3: Insert Sample Data
-INSERT INTO flight VALUES
-("1001", "AI-101", "Delhi", "Mumbai"),
-("1002", "AI-202", "Mumbai", "Bangalore"),
-("1003", "AI-303", "Delhi", "Kolkata");
-🔌 JDBC Connectivity (Example)
-Connection con = DriverManager.getConnection(
-    "jdbc:mysql://localhost:3306/airline",
-    "root",
-    "your_password"
-);
+Opens Home dashboard.
 
-JDBC is used to:
+Uses event handling for button actions.
 
-Execute SQL queries
 
-Insert data into tables
 
-Fetch data from database
+🏠 Home Module
 
-Perform update and delete operations
+Purpose: Main dashboard navigation
 
-🚀 How To Run
+Internal Working:
 
-Open the project in Apache NetBeans
+Displays menu options for all operations.
 
-Configure MySQL username and password in connection file
+Handles navigation between modules.
 
-Run Login.java
+Controls session flow (Login → Operations → Logout).
 
-After successful login → Home page will open
+Uses action listeners for menu interaction.
 
-Use menu options to manage flights and bookings
 
-🎯 Learning Outcomes
 
-Through this project, I practiced:
+👤 Customer Management Module
 
-Java Swing GUI design
+Purpose: Store and manage passenger details
 
-JDBC database connectivity
+Internal Working:
 
-CRUD operations
+Collects customer information through form inputs.
 
-Event handling
+Executes SQL INSERT query to store data in MySQL.
 
-SQL integration
+Retrieves customer data using SELECT queries.
 
-Project structuring in NetBeans
+Displays records using JTable.
 
-Version control using Git
 
-🔮 Future Enhancements
 
-Add seat availability system
+✈️ Flight Information Module
 
-Add ticket price column
+Purpose: Manage flight records
 
-Add admin and user roles
+Internal Working:
 
-Convert into Spring Boot Web Application
+Fetches flight details from flight table.
 
-Integrate real-time flight API
+Displays available flights dynamically.
+
+Uses SQL SELECT queries.
+
+Updates GUI components with database data.
+
+
+
+🎟️ Booking Module
+
+Purpose: Ticket booking system
+
+Internal Working:
+
+Links selected customer with selected flight.
+
+Inserts booking data into booking table.
+
+Generates booking records.
+
+Performs SQL INSERT operation.
+
+
+
+❌ Cancellation Module
+
+Purpose: Cancel booked tickets
+
+Internal Working:
+
+Accepts booking ID or customer reference.
+
+Executes SQL DELETE query.
+
+Updates database records.
+
+Reflects changes in GUI.
+
+
+
+🛫 Journey Details Module
+
+Purpose: Display booking and travel information
+
+Internal Working:
+
+Fetches booking records from database.
+
+Displays journey information in table format.
+
+Uses SQL SELECT queries.
+
+
+
+🔌 Database Connection Module
+
+Purpose: Centralized database handling
+
+Internal Working:
+
+Establishes connection using JDBC driver.
+
+Executes SQL queries.
+
+Handles exceptions.
+
+Reused across all modules.
+
+
+🗄️ Database Tables Used
+flight
+
+id
+
+flight_code
+
+source
+
+destination
+
+customer
+
+customer_id
+
+name
+
+gender
+
+nationality
+
+phone
+
+address
+
+booking
+
+booking_id
+
+customer_id
+
+flight_code
+
+source
+
+destination
+
+
+
+🔄 System Workflow
+
+User logs in
+
+Dashboard loads
+
+User selects operation
+
+JDBC executes SQL query
+
+MySQL processes data
+
+GUI updates dynamically
+
+
+
+🎯 Concepts Applied                                    
+
+Object-Oriented Programming (OOP)                        
+
+Seat availability system
+
+Ticket pricing integration
+
+Booking ID auto-generation
+
+Role-based authentication
+
+
+
+
+🚀 Future Enhancements
+
+Seat availability system
+
+Ticket pricing integration
+
+Booking ID auto-generation
+
+Role-based authentication
+
+Convert to Spring Boot Web Application
