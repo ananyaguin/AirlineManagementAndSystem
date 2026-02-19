@@ -1,249 +1,107 @@
-
 ✈️ Airline Management System
-Java Swing + JDBC + MySQL Desktop Application
-
-A desktop-based Airline Management System developed using Java Swing (GUI) and MySQL Database, integrated through JDBC connectivity.
-The system simulates real-world airline booking operations including authentication, customer management, flight handling, and ticket processing.
-
-📌 Project Overview
-
-This project demonstrates:
-
-GUI development using Java Swing
-
-Backend logic implementation using Java
-
-Database connectivity using JDBC
-
-Execution of SQL queries (CRUD operations)
-
-Modular multi-class project structure
-
-
-🛠️ Technologies Used
-
-☕ Java
-
-🖥 Java Swing
-
-🗄 MySQL
-
-🔌 JDBC (Java Database Connectivity)
-
-🛠 Apache NetBeans
-
-🔄 Git & GitHub
-
-
-
-📂 Project Structure & File Explanation
-🔐 Login Module
-
-Purpose: User authentication
-
-Internal Working:
-
-Accepts username and password using Swing components.
-
-Validates credentials.
-
-On successful validation:
-
-Closes login window.
-
-Opens Home dashboard.
-
-Uses event handling for button actions.
-
-
-
-🏠 Home Module
-
-Purpose: Main dashboard navigation
-
-Internal Working:
-
-Displays menu options for all operations.
-
-Handles navigation between modules.
-
-Controls session flow (Login → Operations → Logout).
-
-Uses action listeners for menu interaction.
-
-
-
-👤 Customer Management Module
-
-Purpose: Store and manage passenger details
-
-Internal Working:
-
-Collects customer information through form inputs.
-
-Executes SQL INSERT query to store data in MySQL.
-
-Retrieves customer data using SELECT queries.
-
-Displays records using JTable.
-
-
-
-✈️ Flight Information Module
-
-Purpose: Manage flight records
-
-Internal Working:
-
-Fetches flight details from flight table.
-
-Displays available flights dynamically.
-
-Uses SQL SELECT queries.
-
-Updates GUI components with database data.
-
-
-
-🎟️ Booking Module
-
-Purpose: Ticket booking system
-
-Internal Working:
-
-Links selected customer with selected flight.
-
-Inserts booking data into booking table.
-
-Generates booking records.
-
-Performs SQL INSERT operation.
-
-
-
-❌ Cancellation Module
-
-Purpose: Cancel booked tickets
-
-Internal Working:
-
-Accepts booking ID or customer reference.
-
-Executes SQL DELETE query.
-
-Updates database records.
-
-Reflects changes in GUI.
-
-
-
-🛫 Journey Details Module
-
-Purpose: Display booking and travel information
-
-Internal Working:
-
-Fetches booking records from database.
-
-Displays journey information in table format.
-
-Uses SQL SELECT queries.
-
-
-
-🔌 Database Connection Module
-
-Purpose: Centralized database handling
-
-Internal Working:
-
-Establishes connection using JDBC driver.
-
-Executes SQL queries.
-
-Handles exceptions.
-
-Reused across all modules.
-
-
-🗄️ Database Tables Used
-flight
-
-id
-
-flight_code
-
-source
-
-destination
-
-customer
-
-customer_id
-
-name
-
-gender
-
-nationality
-
-phone
-
-address
-
-booking
-
-booking_id
-
-customer_id
-
-flight_code
-
-source
-
-destination
-
-
-
-🔄 System Workflow
-
-User logs in
-
-Dashboard loads
-
-User selects operation
-
-JDBC executes SQL query
-
-MySQL processes data
-
-GUI updates dynamically
-
-
-
-🎯 Concepts Applied                                    
-
-Object-Oriented Programming (OOP)                        
-
-Seat availability system
-
-Ticket pricing integration
-
-Booking ID auto-generation
-
-Role-based authentication
-
-
-
-
+🚀 Java Swing • JDBC • MySQL • NetBeans
+A complete desktop-based airline booking and management system built with Java Swing and MySQL. This project simulates real-world airline operations including customer handling, flight management, and ticket booking — all in one clean, fast, and responsive application.
+⭐ Overview
+This Airline Management System allows users to add customers, manage flights, book tickets, cancel tickets, and store all data in MySQL.
+The backend logic is implemented using JDBC, while the interface is built using Java Swing.
+When a user interacts with the system, the backend processes their inputs, communicates with the MySQL database, retrieves or stores data, and updates the UI instantly based on user actions.
+The project showcases real-world design practices for desktop applications, including OOP structure, event-driven programming, and CRUD database operations.
+🔥 What Makes This Project Unique?
+🧱 Built From Scratch
+Fully hand-coded Java Swing forms
+Clean database layer using JDBC
+No frameworks — pure Java logic
+🛫 Airline Operations Simulation
+Add customers, flights, booking records
+Real-time data updates
+View and search flights by cities
+🧹 Smart Data Processing
+Well-structured SQL tables
+Performs validation and error handling
+Clean DB connection layer (Conn.java)
+🖥 Full Desktop User Experience
+Smooth navigation between pages
+Professional UI design
+Buttons, tables, dropdowns, flight forms
+🎯 Key Features
+🔐 Login System
+Secure login validation
+Redirects user to the Home screen
+👤 Customer Management
+Add new customer
+View all customers
+Auto-stored in MySQL
+✈️ Flight Module
+Add new flight records
+Search flights by source and destination
+Display complete flight list
+🎟 Ticket Booking
+Book new tickets
+Display ticket summary
+Save booking data in MySQL
+❌ Ticket Cancellation
+Cancel existing bookings
+Update database automatically
+🗄 Database Integration
+Real JDBC connection:
+Java
+Copy code
+Connection con = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/airline",
+    "root",
+    "your_password"
+);
+🧰 Tech Stack
+Category
+Tools
+Frontend / UI
+Java Swing
+Backend Logic
+Core Java, OOP
+Database
+MySQL
+Connectivity
+JDBC
+IDE
+Apache NetBeans
+Version Control
+Git & GitHub
+📁 Project Structure
+Copy code
+
+AirlineManagementSystem/
+│
+├── src/
+│   ├── Login.java
+│   ├── Home.java
+│   ├── AddCustomer.java
+│   ├── FlightInfo.java
+│   ├── BookFlight.java
+│   ├── CancelBooking.java
+│   └── Conn.java   (MySQL Connection File)
+│
+├── nbproject/
+├── build/
+└── README.md
+🧠 Concepts Applied
+Object-Oriented Programming (OOP)
+Event Handling
+Java Swing UI/UX
+JDBC Connectivity
+SQL CRUD Operations
+Error Handling
+Multi-class application design
 🚀 Future Enhancements
+Seat availability tracking
+Auto-generated ticket prices
+Customer flight history
+PDF ticket generation
+Convert backend into Spring Boot
+Deploy as a full web-based airline portal
 
-Seat availability system
 
-Ticket pricing integration
 
-Booking ID auto-generation
 
-Role-based authentication
 
-Convert to Spring Boot Web Application
+
+
