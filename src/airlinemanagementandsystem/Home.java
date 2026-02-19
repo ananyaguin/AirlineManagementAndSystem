@@ -1,120 +1,143 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package airlinemanagementandsystem;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java. sql.*;
+import java.net.URL;
 
 public class Home extends JFrame implements ActionListener {
-    
-    public Home(){
+
+    public Home() {
+
         
-    
-    setLayout(null);
-    
-    ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("airlinemanagementandsystem/icons/front.jpg"));
-    JLabel image=new JLabel(i1);
-    image.setBounds(0,0,1600,800);
-    add(image);
-    
-    JLabel heading=new JLabel("AIR INDIA WELCOMES YOU ");
-    heading.setBounds(440,40,1000,40);
-    heading.setForeground(Color.BLUE);
-    heading.setFont(new Font("Tahoma",Font.CENTER_BASELINE,46));
-    image.add(heading);
-    
-    
-    JMenuBar menubar=new JMenuBar();
-    setJMenuBar(menubar);
-    
-    JMenu details=new JMenu("Details");
-    menubar.add(details);
-    
-    JMenuItem flightDetails =new JMenu("Flight Details");
-    details.add(flightDetails);
-    
-    flightDetails.addActionListener(new ActionListener() {
-    public void actionPerformed(ActionEvent ae) {
-        new FlightDetails();
-    }
-});
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setLayout(null);
 
+       
+        UIManager.put("Menu.selectionBackground", new Color(173, 216, 230));
+        UIManager.put("MenuItem.selectionBackground", new Color(200, 230, 255));
 
-    
-    JMenuItem customerDetails=new JMenu("Add Customer Details");
-    details.add(customerDetails);
-    
-    customerDetails.addActionListener(new ActionListener() {
-    public void actionPerformed(ActionEvent ae) {
-        new CustomerDetails();
-    }
-});
+     
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int width = screenSize.width;
+        int height = screenSize.height;
 
+        URL url = ClassLoader.getSystemResource("airlinemanagementandsystem/icons/front.jpg");
+
+        if (url != null) {
+            ImageIcon i1 = new ImageIcon(url);
+            Image i2 = i1.getImage().getScaledInstance(width, height, Image.SCALE_SMOOTH);
+            ImageIcon i3 = new ImageIcon(i2);
+
+            JLabel image = new JLabel(i3);
+            image.setBounds(0, 0, width, height);
+            image.setLayout(null);
+            add(image);
+
+            
+            JLabel heading = new JLabel("AIR INDIA WELCOMES YOU");
+            heading.setBounds(width / 3, 40, 1000, 50);
+            heading.setForeground(new Color(0, 0, 200));
+            heading.setFont(new Font("Tahoma", Font.BOLD, 40));
+            image.add(heading);
+        }
 
     
-    JMenuItem journeyDetails=new JMenu(" Journey Details");
-    details.add(journeyDetails);
-    
-    
+        JMenuBar menubar = new JMenuBar();
+        menubar.setBackground(Color.WHITE);
+        setJMenuBar(menubar);
 
-    
-    JMenuItem addCustomer = new JMenuItem("Add Customer");
-    details.add(addCustomer);
+      
+        JMenu details = new JMenu("Details");
+        details.setFont(new Font("Tahoma", Font.BOLD, 14));
+        menubar.add(details);
 
-    addCustomer.addActionListener(new ActionListener() {
-    public void actionPerformed(ActionEvent ae) {
-        new AddCustomer();
-    }
-     });
+        JMenuItem flightDetails = new JMenuItem("Flight Details");
+        flightDetails.addActionListener(this);
+        details.add(flightDetails);
 
-    
-    
-    
-    JMenu ticket=new JMenu("Ticket");
-    menubar.add(ticket);
-    
-    JMenuItem bookflight=new JMenu(" Book flight");
-    ticket.add(bookflight);
-    
-    bookflight.addActionListener(new ActionListener() {
-    public void actionPerformed(ActionEvent ae) {
-        new BookFlight();
-    }
-});
+        JMenuItem customerDetails = new JMenuItem("Add Customer");
+        customerDetails.addActionListener(this);
+        details.add(customerDetails);
 
-    
-    JMenuItem ticketCancelation=new JMenu(" Cancel Ticket");
-    ticket.add(ticketCancelation);
-    
-    JMenuItem boardingpass=new JMenu(" Boardingpass");
-    ticket.add(boardingpass);
-    
-    
-    
-
-    
-
-    
-    
-    setExtendedState(JFrame.MAXIMIZED_BOTH);
-    setLocation(600,250);   
-    
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setVisible(true);
-    
-    }
-    public void actionPerformed(ActionEvent ae){
-    
         
+        JMenu booking = new JMenu("Booking");
+        booking.setFont(new Font("Tahoma", Font.BOLD, 14));
+        menubar.add(booking);
+
+        JMenuItem bookFlight = new JMenuItem("Book Flight");
+        bookFlight.addActionListener(this);
+        booking.add(bookFlight);
+
+        JMenuItem journeyDetails = new JMenuItem("Journey Details");
+        journeyDetails.addActionListener(this);
+        booking.add(journeyDetails);
+
+        JMenu ticket = new JMenu("Ticket");
+        ticket.setFont(new Font("Tahoma", Font.BOLD, 14));
+        menubar.add(ticket);
+
+        JMenuItem boardingPass = new JMenuItem("Boarding Pass");
+        boardingPass.addActionListener(this);
+        ticket.add(boardingPass);
+
+        JMenuItem ticketCancellation = new JMenuItem("Cancel Ticket");
+        ticketCancellation.addActionListener(this);
+        ticket.add(ticketCancellation);
+
+        
+        JMenu help = new JMenu("Help");
+        help.setFont(new Font("Tahoma", Font.BOLD, 14));
+        menubar.add(help);
+
+        JMenuItem about = new JMenuItem("About");
+        about.addActionListener(this);
+        help.add(about);
+
+        JMenuItem logout = new JMenuItem("Logout");
+        logout.addActionListener(this);
+        help.add(logout);
+
+        setVisible(true);
     }
+
     
-    public static void main(String[]args){
-    
-    new Home();
-    
+    public void actionPerformed(ActionEvent ae) {
+
+        String text = ae.getActionCommand();
+
+        if (text.equals("Add Customer")) {
+            new AddCustomer();
+        } 
+        else if (text.equals("Flight Details")) {
+            new FlightDetails();
+        } 
+        else if (text.equals("Book Flight")) {
+            new BookFlight();
+        } 
+        else if (text.equals("Journey Details")) {
+            new JourneyDetails();
+        } 
+        else if (text.equals("Cancel Ticket")) {
+            new Cancel();
+        } 
+        else if (text.equals("Boarding Pass")) {
+            new BoardingPass();
+        } 
+        else if (text.equals("Logout")) {
+            setVisible(false);
+            new Login();
+        } 
+        else if (text.equals("About")) {
+            JOptionPane.showMessageDialog(null,
+                    "Airline Management System\nDeveloped by Ananya ✈️",
+                    "About",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
+
+    public static void main(String[] args) {
+        new Home();
     }
 }

@@ -5,82 +5,143 @@ package airlinemanagementandsystem;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.sql.*;
 
-public class AddCustomer extends JFrame implements ActionListener {
-
-    JTextField tfname, tfphone, tfaadhar, tfnationality;
-    JButton save;
-
-    public AddCustomer() {
-
+public class AddCustomer extends JFrame implements ActionListener{
+    
+    JTextField tfname, tfphone, tfaadhar, tfnationality, tfaddress;
+    JRadioButton rbmale, rbfemale;
+    
+        public AddCustomer() {
+        getContentPane().setBackground(Color.WHITE);
         setLayout(null);
-
+        
         JLabel heading = new JLabel("ADD CUSTOMER DETAILS");
-        heading.setBounds(200,20,400,30);
-        heading.setFont(new Font("Tahoma", Font.BOLD, 22));
+        heading.setBounds(220, 20, 500, 35);
+        heading.setFont(new Font("Tahoma", Font.PLAIN, 32));
+        heading.setForeground(Color.BLUE);
         add(heading);
-
-        JLabel name = new JLabel("Name");
-        name.setBounds(50,80,100,25);
-        add(name);
-
+        
+        JLabel lblname = new JLabel("Name");
+        lblname.setBounds(60, 80, 150, 25);
+        lblname.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        add(lblname);
+        
         tfname = new JTextField();
-        tfname.setBounds(150,80,150,25);
+        tfname.setBounds(220, 80, 150, 25);
         add(tfname);
-
-        JLabel phone = new JLabel("Phone");
-        phone.setBounds(50,120,100,25);
-        add(phone);
-
-        tfphone = new JTextField();
-        tfphone.setBounds(150,120,150,25);
-        add(tfphone);
-
-        JLabel aadhar = new JLabel("Aadhar");
-        aadhar.setBounds(50,160,100,25);
-        add(aadhar);
-
-        tfaadhar = new JTextField();
-        tfaadhar.setBounds(150,160,150,25);
-        add(tfaadhar);
-
-        JLabel nationality = new JLabel("Nationality");
-        nationality.setBounds(50,200,100,25);
-        add(nationality);
-
+        
+        JLabel lblnationality = new JLabel("Nationality");
+        lblnationality.setBounds(60, 130, 150, 25);
+        lblnationality.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        add(lblnationality);
+        
         tfnationality = new JTextField();
-        tfnationality.setBounds(150,200,150,25);
+        tfnationality.setBounds(220, 130, 150, 25);
         add(tfnationality);
+        
+        JLabel lblaadhar = new JLabel("Aadhar Number");
+        lblaadhar.setBounds(60, 180, 150, 25);
+        lblaadhar.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        add(lblaadhar);
+        
+        tfaadhar = new JTextField();
+        tfaadhar.setBounds(220, 180, 150, 25);
+        add(tfaadhar);
+        
+        JLabel lbladdress = new JLabel("Address");
+        lbladdress.setBounds(60, 230, 150, 25);
+        lbladdress.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        add(lbladdress);
+        
+        tfaddress = new JTextField();
+        tfaddress.setBounds(220, 230, 150, 25);
+        add(tfaddress);
+        
+        JLabel lblgender = new JLabel("Gender");
+        lblgender.setBounds(60, 280, 150, 25);
+        lblgender.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        add(lblgender);
+        
+        ButtonGroup gendergroup = new ButtonGroup();
+        
+        rbmale = new JRadioButton("Male");
+        rbmale.setBounds(220, 280, 70, 25);
+        rbmale.setBackground(Color.WHITE);
+        add(rbmale);
+        
+        rbfemale = new JRadioButton("Female");
+        rbfemale.setBounds(300, 280, 90, 25);
+        rbfemale.setBackground(Color.WHITE);
+        add(rbfemale);
+        
+        gendergroup.add(rbmale);
+        gendergroup.add(rbfemale);
+        
+        JLabel lblphone = new JLabel("Phone");
+        lblphone.setBounds(60, 330, 150, 25);
+        lblphone.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        add(lblphone);
+        
+        tfphone = new JTextField();
+        tfphone.setBounds(220, 330, 150, 25);
+        add(tfphone);
+        
+        JButton save = new JButton("SAVE");
+        save.setBounds(220, 450, 150, 30);
 
-        save = new JButton("Save");
-        save.setBounds(150,250,100,30);
-        save.addActionListener(this);
-        add(save);
+        save.setBackground(Color.BLACK);
+save.setForeground(Color.WHITE);
 
-        setSize(500,400);
-        setLocation(400,200);
+save.setFocusPainted(false);
+save.setBorderPainted(false);
+save.setOpaque(true);
+
+save.setContentAreaFilled(true);
+
+save.addActionListener(this);
+add(save);
+
+        
+        ImageIcon image = new ImageIcon(ClassLoader.getSystemResource("airlinemanagementandsystem/icons/emp.png"));
+        JLabel lblimage = new JLabel(image);
+        lblimage.setBounds(450, 80, 280, 400);
+        add(lblimage);
+        
+        setSize(900, 600);
+        setLocation(300, 150);
         setVisible(true);
     }
-
+    
     public void actionPerformed(ActionEvent ae) {
-
         String name = tfname.getText();
-        String phone = tfphone.getText();
-        String aadhar = tfaadhar.getText();
         String nationality = tfnationality.getText();
+        String phone = tfphone.getText();
+        String address = tfaddress.getText();
+        String aadhar = tfaadhar.getText();
+        String gender = null;
+        if (rbmale.isSelected()) {
+    gender = "Male";
+} else if (rbfemale.isSelected()) {
+    gender = "Female";
+}
 
+        
         try {
-            Conn c = new Conn();
-            String query = "insert into customer values('"+name+"','"+phone+"','"+aadhar+"','"+nationality+"')";
-            c.s.executeUpdate(query);
-
-            JOptionPane.showMessageDialog(null, "Customer Added Successfully");
+            Conn conn = new Conn();
+            
+            String query = "insert into passenger values('"+name+"', '"+nationality+"', '"+phone+"', '"+address+"', '"+aadhar+"', '"+gender+"')";
+        
+            conn.s.executeUpdate(query);
+            
+            JOptionPane.showMessageDialog(null, "Customer Details Added Successfully");
+        
             setVisible(false);
-
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-}
 
+    public static void main(String[] args) {
+        new AddCustomer();
+    }
+}
