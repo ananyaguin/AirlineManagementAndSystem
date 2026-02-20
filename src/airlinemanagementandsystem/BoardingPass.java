@@ -31,6 +31,7 @@ public class BoardingPass extends JFrame implements ActionListener{
         JLabel lblaadhar = new JLabel("PNR DETAILS");
         lblaadhar.setBounds(60, 100, 150, 25);
         lblaadhar.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        
         add(lblaadhar);
         
         tfpnr = new JTextField();

@@ -6,12 +6,16 @@
             <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/Login.java</file>
             <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/Conn.java</file>
             <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/Home.java</file>
+            <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/AddCustomer.java</file>
+            <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/BookFlight.java</file>
+            <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/FlightDetails.java</file>
+            <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/JourneyDetails.java</file>
+            <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/BoardingPass.java</file>
+            <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/Cancel.java</file>
             <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/icons/front.jpg</file>
             <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/icons/emp.png</file>
-            <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/AddCustomer.java</file>
-            <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/FlightDetails.java</file>
-            <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/CustomerDetails.java</file>
-            <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/BookFlight.java</file>
+            <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/icons/details.jpg</file>
+            <file>file:/Users/AnanyasMac/NetBeansProjects/AirlineManagementAndSystem/src/airlinemanagementandsystem/icons/airindia.png</file>
         </group>
     </open-files>
 </project-private>
