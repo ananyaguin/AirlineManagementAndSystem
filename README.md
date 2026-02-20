@@ -142,3 +142,14 @@ This project was developed as a **core knowledge practice application** to stren
 The focus of this project is on mastering **fundamentals and core concepts**, without using any external frameworks or frontend technologies.
 
 ---
+
+## 🔄 Future Improvements
+
+I plan to enhance this project further by implementing the following improvements:
+
+- Adding a more structured and scalable flight data management system  
+- Designing a custom API to fetch dynamic flight information  
+- Simulating real-world airline data flow similar to production airline systems  
+- Improving database design, normalization, and query optimization  
+
+This is a practice-based project focused on strengthening core fundamentals, and it will be upgraded step by step with more advanced features.
