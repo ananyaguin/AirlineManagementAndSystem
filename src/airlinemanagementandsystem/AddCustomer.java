@@ -69,6 +69,7 @@ public class AddCustomer extends JFrame implements ActionListener{
         rbmale.setBackground(Color.WHITE);
         add(rbmale);
         
+        
         rbfemale = new JRadioButton("Female");
         rbfemale.setBounds(300, 280, 90, 25);
         rbfemale.setBackground(Color.WHITE);

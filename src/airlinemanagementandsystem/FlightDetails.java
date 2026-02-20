@@ -26,32 +26,33 @@ public class FlightDetails extends JFrame {
             e.printStackTrace();
         }
 
-        // ===== TABLE DESIGN =====
+        
 
-        // Background & text color
+        
+        
         table.setBackground(Color.WHITE);
         table.setForeground(Color.BLACK);
 
-        // Row height
+       
         table.setRowHeight(30);
 
-        // Show grid lines
+        
         table.setShowGrid(true);
         table.setGridColor(Color.BLACK);
 
-        // Header styling
+       
         JTableHeader header = table.getTableHeader();
         header.setBackground(Color.WHITE);
         header.setForeground(Color.BLACK);
         header.setFont(new Font("SansSerif", Font.BOLD, 14));
-        header.setBorder(new LineBorder(Color.BLACK, 2)); // medium bold border
+        header.setBorder(new LineBorder(Color.BLACK, 2)); 
 
-        // Cell renderer for medium bold borders
+        
         DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
-        renderer.setHorizontalAlignment(JLabel.CENTER); // center text
+        renderer.setHorizontalAlignment(JLabel.CENTER); 
         renderer.setBackground(Color.WHITE);
         renderer.setForeground(Color.BLACK);
-        renderer.setBorder(new LineBorder(Color.BLACK, 2)); // medium bold border
+        renderer.setBorder(new LineBorder(Color.BLACK, 2)); 
 
         for (int i = 0; i < table.getColumnCount(); i++) {
             table.getColumnModel().getColumn(i).setCellRenderer(renderer);

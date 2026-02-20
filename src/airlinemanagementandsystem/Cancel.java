@@ -46,12 +46,11 @@ public class Cancel extends JFrame implements ActionListener{
         fetchButton.setBounds(380, 80, 140, 25);
         
         fetchButton.setFocusPainted(false);
-        
        fetchButton.setFocusPainted(false);
-fetchButton.setBorderPainted(false);
-fetchButton.setOpaque(true);
+       fetchButton.setBorderPainted(false);
+       fetchButton.setOpaque(true);
 
-fetchButton.setContentAreaFilled(true);
+        fetchButton.setContentAreaFilled(true);
 
         fetchButton.addActionListener(this);
         add(fetchButton);

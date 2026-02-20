@@ -44,12 +44,12 @@ public class BoardingPass extends JFrame implements ActionListener{
         fetchButton.setBounds(380, 100, 120, 25);
         fetchButton.setBackground(Color.BLACK);
         fetchButton.setFocusPainted(false);
-fetchButton.setBackground(Color.BLACK);
+        fetchButton.setBackground(Color.BLACK);
         fetchButton.setBorderPainted(false);
-fetchButton.setBackground(Color.BLACK);
+        fetchButton.setBackground(Color.BLACK);
         fetchButton.setOpaque(true);
 
-fetchButton.setBackground(Color.BLACK);
+        fetchButton.setBackground(Color.BLACK);
         fetchButton.setContentAreaFilled(true);
         fetchButton.addActionListener(this);
         add(fetchButton);

@@ -119,10 +119,8 @@ fetchButton.setContentAreaFilled(true);
         flight.setForeground(Color.WHITE);
         flight.setBounds(380, 380, 140, 25);
         flight.setBorderPainted(false);
-flight.setOpaque(true);
-
-flight.setContentAreaFilled(true);
-        
+        flight.setOpaque(true);
+        flight.setContentAreaFilled(true);
         flight.addActionListener(this);
         add(flight);
         

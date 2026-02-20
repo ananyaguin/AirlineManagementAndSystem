@@ -33,10 +33,10 @@ public class JourneyDetails extends JFrame implements ActionListener{
         show.setFocusPainted(false);
 show.setBorderPainted(false);
 show.setOpaque(true);
-
 show.setContentAreaFilled(true);
         show.addActionListener(this);
         add(show);
+        
         
         table = new JTable();
         
