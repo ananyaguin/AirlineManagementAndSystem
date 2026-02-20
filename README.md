@@ -1,6 +1,6 @@
 # ✈️ AIRLINE MANAGEMENT SYSTEM  
 
-### 🚀 Core Java • Java Swing • MySQL • JDBC  
+### 🚀 Core Java • Java Swing • MySQL • JDBC Connectivity 
 
 ---
 
