@@ -85,14 +85,60 @@ The system uses **JDBC (Java Database Connectivity)** to:
 - Fetch and display records dynamically  
 - Maintain data consistency  
 
-Example Connection:
 
-```java
-Connection con = DriverManager.getConnection(
-    "jdbc:mysql://localhost:3306/airline",
-    "root",
-    "your_password"
-);
+---
 
+
+## 🎯 Key Features  
+
+✔ Secure login authentication  
+
+✔ Automatic customer data fetching using Aadhar number  
+
+✔ PNR generation system after successful ticket booking  
+
+✔ Real-time MySQL database updates  
+
+✔ Booking and cancellation functionality  
+
+✔ Dynamic journey details retrieval using PNR  
+
+✔ Clean Java Swing GUI interface  
+
+✔ Structured multi-class architecture  
+
+---
+
+## 🧠 Concepts Applied  
+
+- Object-Oriented Programming (OOP)  
+
+- Event Handling using ActionListener  
+
+- GUI Development with Java Swing  
+
+- JDBC Integration with MySQL  
+
+- SQL CRUD Operations (INSERT, SELECT, DELETE)  
+
+- Exception Handling  
+
+- Modular and Organized Code Structure  
+
+---
+
+## 🚀 Purpose of the Project  
+
+This project was developed as a **core knowledge practice application** to strengthen understanding of:
+
+- Backend logic implementation  
+
+- Database connectivity using JDBC  
+
+- Desktop application workflow design  
+
+- Real-world airline booking system simulation  
+
+The focus of this project is on mastering **fundamentals and core concepts**, without using any external frameworks or frontend technologies.
 
 ---
